@@ -9,7 +9,7 @@
 
 ## Purpose
 
-The purpose of this Standard Operating Procedure (SOP) is to provide a structured and repeatable method for integrating new users and departments into CSN Company’s Active Directory (AD) infrastructure. This SOP ensures that all technical staff follow a consistent approach when joining systems to the domain, creating organizational units, and applying group policies. By adhering to this document, the IT team can ensure operational consistency, reduce misconfiguration risks, and maintain compliance with security and usability standards.
+The purpose of this Standard Operating Procedure (SOP) is to provide a structured and repeatable method for integrating new users and departments into CSN Company’s Active Directory (AD) infrastructure. This sop ensures that all staff with administrative permissions follow a consistent approach when joining systems to the domain, creating organizational units, and applying group policies. by adhering to this sop, company can ensure operational consistency, reduce misconfiguration risks, and maintain compliance with security and usability standards. 
 
 ## 1. Introduction
 
@@ -153,13 +153,13 @@ Backup-GPO -Name "GPO_Management" -Path "C:\GPOBackups"
 ---
 
 ## 6. Troubleshooting
+| **Issue** | **Resolution** |
+|-----------|----------------|
+| Unable to join domain | check the client has appropriate DNS settings linking to the domain controller. Verify GPO status using `gpresult /h report.html` or run `gpresult /r`. Make sure no firewall is blocking necessary ports (e.g., 88, 389) |
+| GPO not applying | Check if the account is locked or blocked using Active Directory Users and Computers (ADUC) |
+| Organizational Unit | Make sure the user or machine is in the right Organizational Unit (OU) |
+| Login issues | If  a password is lost, reset it through the users account in ADUC; use `repadmin /showrepl` to obtain complete replication partner data. Review replication health fast with `rep administr /replsummary`. Look for DNS resolution problems spanning domain controllers (DCs). |
 
-| **Issue**            | **Resolution**                                                                                                                                                         |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unable to join domain | - Verify the client has correct DNS settings connecting to the domain controller<br>- Ensure no firewall is blocking required ports (e.g., 88, 389)                   |
-| GPO not applying     | - Check GPO status using `gpresult /h report.html` or run `gpresult /r`<br>- Make sure the user or computer is in the correct Organizational Unit (OU)                |
-| Login issues         | - Check if the account is locked or blocked using Active Directory Users and Computers (ADUC)<br>- Reset the password if forgotten                                     |
-| Replication issues   | - Run `repadmin /showrepl` to get comprehensive replication partner information<br>- Use `repadmin /replsummary` to quickly review replication health<br>- Search for DNS resolution issues between domain controllers (DCs) |
 
 
 ---
