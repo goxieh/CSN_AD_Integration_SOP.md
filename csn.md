@@ -88,9 +88,6 @@ Event Viewer helps identify issues by monitoring logs related to:
 
 - Ensure the joining systems are on the same network or connected via VPN.
 - Set DNS to domain controller IP (e.g., 192.168.1.10).
-  ![image](https://github.com/user-attachments/assets/bb6c7dad-4c12-4d02-b598-f6f7023b25d1)
-
-
 - Test with: `ping csn.local`
 
 ### Step 2: Join Computer to Domain
@@ -100,7 +97,7 @@ Event Viewer helps identify issues by monitoring logs related to:
 - Select **Domain**, enter: `csn.local`
 - Provide domain admin credentials
 - Restart the computer when prompted
-  ![image](https://github.com/user-attachments/assets/fa0b95b3-4026-4fb6-8f63-909a0a480b2c)
+  
 
 
 ### Step 3: Create Organizational Units (OUs)
@@ -112,15 +109,10 @@ Event Viewer helps identify issues by monitoring logs related to:
   - OU: Management
   - OU: IT Support
   - OU: Staff
-  ![image](https://github.com/user-attachments/assets/efc8205e-0fe9-4d5f-964b-cea9c6a0434c)
-
 
 ### Step 4: Add Users to Domain and Assign to OUs
 
-- Inside each OU > Right-click > New > User
-![image](https://github.com/user-attachments/assets/1f34f13d-8ff5-4e3f-b871-f7901a66ded2)
-
-  
+- Inside each OU > Right-click > New > User  
 - Enter details:
   - First/Last Name
   - Username (e.g., jdoe)
@@ -138,10 +130,7 @@ Event Viewer helps identify issues by monitoring logs related to:
   - Password complexity
   - Screen lock timeout
   - User rights assignments
-  - Drive mappings/login scripts (optional)
- ![image](https://github.com/user-attachments/assets/ddf67659-e9f1-4db5-80c9-b02f29e051ea)
-
-  
+  - Drive mappings/login scripts (optional)  
 - Link each GPO to its respective OU
 - Run `gpupdate /force` on clients or wait for refresh
 
@@ -156,7 +145,7 @@ Event Viewer helps identify issues by monitoring logs related to:
 
 - Export user and OU details
 - Backup GPOs using PowerShell:
-
+  
 ```powershell
 Backup-GPO -Name "GPO_Management" -Path "C:\GPOBackups"
 ```
@@ -234,20 +223,6 @@ nltest /dsgetdc:csn.local
 
 ---
 
-## Rubric Alignment
 
-| Criteria                  | Level 3 (2.1–3.0 pts)                                 |
-| ------------------------- | ----------------------------------------------------- |
-| **Title**                 | Clear & concise overview                              |
-| **Scope/Objectives**      | All objectives covered clearly and completely         |
-| **Accountability Matrix** | Implicit coverage of tasks under group responsibility |
-| **Reversion**             | Versioning included via date and authorship           |
-| **Steps**                 | Detailed, step-by-step instructions included          |
-| **Approval Table**        | Group names and authors clearly listed                |
-| **Purpose**               | Well-defined with outcomes and goals                  |
-| **Writing**               | Clear, structured with lists and tables               |
 
-> Estimated Rubric Level: **Level 3 – Full Marks (21/21 points)**
-
----
 
