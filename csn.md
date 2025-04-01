@@ -154,16 +154,17 @@ Backup-GPO -Name "GPO_Management" -Path "C:\GPOBackups"
 
 ## 6. Troubleshooting
 
-| Issue              | Resolution                                                 |
-| ------------------ | ---------------------------------------------------------- |
-| Cannot join domain | Check DNS settings, firewall, and ensure admin credentials |
-| GPO not applying   | Use `gpresult /h report.html` and verify OU/GPO linkage    |
-| Login failures     | Reset password or unlock account via ADUC                  |
-| Replication issues | Check DC sync status with `repadmin /replsummary`          |
+| **Issue**            | **Resolution**                                                                                                                                                         |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Unable to join domain | - Verify the client has correct DNS settings connecting to the domain controller<br>- Ensure no firewall is blocking required ports (e.g., 88, 389)                   |
+| GPO not applying     | - Check GPO status using `gpresult /h report.html` or run `gpresult /r`<br>- Make sure the user or computer is in the correct Organizational Unit (OU)                |
+| Login issues         | - Check if the account is locked or blocked using Active Directory Users and Computers (ADUC)<br>- Reset the password if forgotten                                     |
+| Replication issues   | - Run `repadmin /showrepl` to get comprehensive replication partner information<br>- Use `repadmin /replsummary` to quickly review replication health<br>- Search for DNS resolution issues between domain controllers (DCs) |
+
 
 ---
 
-## 7. Conclusion
+## 7. Conclusion / Purpose
 
 This SOP outlines the systematic approach to integrating a small team into the parent company’s Active Directory. With 10 users, 3 OUs, and relevant GPOs in place, this ensures scalability, security, and streamlined administrative control for CSN’s IT infrastructure.
 
