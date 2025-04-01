@@ -153,12 +153,13 @@ Backup-GPO -Name "GPO_Management" -Path "C:\GPOBackups"
 ---
 
 ## 6. Troubleshooting
-| **Issue** | **Resolution** |
-|-----------|----------------|
-| Unable to join domain | check the client has appropriate DNS settings linking to the domain controller. Verify GPO status using `gpresult /h report.html` or run `gpresult /r`. Make sure no firewall is blocking necessary ports (e.g., 88, 389) |
-| GPO not applying | Check if the account is locked or blocked using Active Directory Users and Computers (ADUC) |
-| Organizational Unit /h Make sure the user or machine is in the right Organizational Unit (OU) |
-| Login issues | If  a password is lost, reset it through the users account in ADUC; use `repadmin /showrepl` to obtain complete replication partner data. Review replication health fast with `rep administr /replsummary`. Look for DNS resolution problems spanning domain controllers (DCs). |
+
+| **Issue**            | **Resolution**                                                                                                                                                         |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Unable to join domain | - Verify the client has correct DNS settings connecting to the domain controller<br>- Ensure no firewall is blocking required ports (e.g., 88, 389)                   |
+| GPO not applying     | - Check GPO status using `gpresult /h report.html` or run `gpresult /r`<br>- Make sure the user or computer is in the correct Organizational Unit (OU)                |
+| Login issues         | - Check if the account is locked or blocked using Active Directory Users and Computers (ADUC)<br>- Reset the password if forgotten                                     |
+| Replication issues   | - Run `repadmin /showrepl` to get comprehensive replication partner information<br>- Use `repadmin /replsummary` to quickly review replication health<br>- Search for DNS resolution issues between domain controllers (DCs) |
 
 
 
