@@ -156,10 +156,10 @@ Backup-GPO -Name "GPO_Management" -Path "C:\GPOBackups"
 
 | **Issue**            | **Resolution**                                                                                                                                                         |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unable to join domain | - Verify the client has correct DNS settings connecting to the domain controller<br>- Ensure no firewall is blocking required ports (e.g., 88, 389)                   |
-| GPO not applying     | - Check GPO status using `gpresult /h report.html` or run `gpresult /r`<br>- Make sure the user or computer is in the correct Organizational Unit (OU)                |
-| Login issues         | - Check if the account is locked or blocked using Active Directory Users and Computers (ADUC)<br>- Reset the password if forgotten                                     |
-| Replication issues   | - Run `repadmin /showrepl` to get comprehensive replication partner information<br>- Use `repadmin /replsummary` to quickly review replication health<br>- Search for DNS resolution issues between domain controllers (DCs) |
+| Unable to join domain | - check if the client has appropriate DNS settings linking to the domain controller<br>- Verify no firewall is blocking required ports (e.g., 88, 389)                   |
+| GPO not applying     | - Use the commands `gpresult /h report.html` or run `gpresult to check GPO status /r`<br>- Verify the user or computer is in the correct Organizational Unit where GPO is applied             |
+| Login issues         | - Verify if the account is locked or blocked using Active Directory Users and Computers with your admin priviledges (ADUC)<br>- Reseting the password if forgotten is also a way to solve loggies issues.                                     |
+| Replication issues   | - Run `repadmin /showrepl` to get comprehensive replication partner information<br>- Use `repadmin /replsummary` to quickly review replication health<br>- Mst Importantly, Verify there isn't any DNS resolution issues between domain controllers (DCs) and SERVER |
 
 
 
@@ -185,10 +185,14 @@ This SOP outlines the systematic approach to integrating a small team into the p
 **Tools Used:** ADUC, GPMC, PowerShell, Event Viewer\
 **Useful Commands:**
 
-```bash
-gpupdate /force
-net config workstation
-nltest /dsgetdc:csn.local
+```
+'whoami'
+'gpupdate /force'
+'net config workstation'
+'hostname'
+`net user <username>`
+`net group <groupname> /domain`
+`gpresult /R'
 ```
 
 ---
