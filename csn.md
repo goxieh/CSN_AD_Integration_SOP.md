@@ -118,6 +118,8 @@ Event Viewer helps identify issues by monitoring logs related to:
 ### Step 4: Add Users to Domain and Assign to OUs
 
 - Inside each OU > Right-click > New > User
+
+  
 - Enter details:
   - First/Last Name
   - Username (e.g., jdoe)
