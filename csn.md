@@ -186,13 +186,16 @@ This SOP outlines the systematic approach to integrating a small team into the p
 **Useful Commands:**
 
 ```
-'whoami'
-'gpupdate /force'
-'net config workstation'
-'hostname'
-`net user <username>`
-`net group <groupname> /domain`
-`gpresult /R'
+| **Command**                        |
+|-----------------------------------|
+| 'whoami'                          |
+| 'gpupdate /force'                 |
+| 'net config workstation'          |
+| 'hostname'                        |
+| `net user <username>`             |
+| `net group <groupname> /domain`  |
+| `gpresult /R`                     |
+
 ```
 
 ---
