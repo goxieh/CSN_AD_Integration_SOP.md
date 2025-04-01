@@ -196,7 +196,7 @@ This SOP outlines the systematic approach to integrating a small team into the p
 | net group <groupname> /domain | 
 | gpresult /R                    | 
 
-
+---
 
 ---
 
