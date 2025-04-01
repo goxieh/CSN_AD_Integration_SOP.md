@@ -157,7 +157,7 @@ Backup-GPO -Name "GPO_Management" -Path "C:\GPOBackups"
 |-----------|----------------|
 | Unable to join domain | check the client has appropriate DNS settings linking to the domain controller. Verify GPO status using `gpresult /h report.html` or run `gpresult /r`. Make sure no firewall is blocking necessary ports (e.g., 88, 389) |
 | GPO not applying | Check if the account is locked or blocked using Active Directory Users and Computers (ADUC) |
-| Organizational Unit | Make sure the user or machine is in the right Organizational Unit (OU) |
+| Organizational Unit /h Make sure the user or machine is in the right Organizational Unit (OU) |
 | Login issues | If  a password is lost, reset it through the users account in ADUC; use `repadmin /showrepl` to obtain complete replication partner data. Review replication health fast with `rep administr /replsummary`. Look for DNS resolution problems spanning domain controllers (DCs). |
 
 
