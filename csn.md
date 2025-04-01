@@ -139,6 +139,9 @@ Event Viewer helps identify issues by monitoring logs related to:
   - Screen lock timeout
   - User rights assignments
   - Drive mappings/login scripts (optional)
+ ![image](https://github.com/user-attachments/assets/ddf67659-e9f1-4db5-80c9-b02f29e051ea)
+
+  
 - Link each GPO to its respective OU
 - Run `gpupdate /force` on clients or wait for refresh
 
