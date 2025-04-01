@@ -88,6 +88,8 @@ Event Viewer helps identify issues by monitoring logs related to:
 
 - Ensure the joining systems are on the same network or connected via VPN.
 - Set DNS to domain controller IP (e.g., 192.168.1.10).
+  ![image](https://github.com/user-attachments/assets/bb6c7dad-4c12-4d02-b598-f6f7023b25d1)
+
 
 - Test with: `ping csn.local`
 
