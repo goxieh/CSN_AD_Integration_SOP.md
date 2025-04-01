@@ -112,6 +112,8 @@ Event Viewer helps identify issues by monitoring logs related to:
   - OU: Management
   - OU: IT Support
   - OU: Staff
+  ![image](https://github.com/user-attachments/assets/efc8205e-0fe9-4d5f-964b-cea9c6a0434c)
+
 
 ### Step 4: Add Users to Domain and Assign to OUs
 
