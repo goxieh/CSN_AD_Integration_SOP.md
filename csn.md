@@ -100,6 +100,8 @@ Event Viewer helps identify issues by monitoring logs related to:
 - Select **Domain**, enter: `csn.local`
 - Provide domain admin credentials
 - Restart the computer when prompted
+  ![image](https://github.com/user-attachments/assets/fa0b95b3-4026-4fb6-8f63-909a0a480b2c)
+
 
 ### Step 3: Create Organizational Units (OUs)
 
